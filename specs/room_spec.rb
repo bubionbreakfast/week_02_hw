@@ -55,6 +55,11 @@ class TestRoom < Minitest::Test
     assert_equal("Purple Rain", @guest1.favourite_song())
   end
 
+  def test_whoop()
+    @room1.add_song(@guest1)
+    assert_equal("Whoop!", @guest1.favourite_song())
+  end
+
 
 
 end

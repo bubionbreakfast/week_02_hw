@@ -37,4 +37,10 @@ class Room
     @songs << favourite_song
   end
 
+  def whoop(favourite_song)
+    if @songs.include?(favourite_song)
+      return "Whoop!"
+  end
+end
+
 end
