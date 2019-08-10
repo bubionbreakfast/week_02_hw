@@ -20,6 +20,17 @@ def test_get_number_of_rooms()
     assert_equal(0, @karaoke.get_rooms())
 end
 
+def test_get_karaoke_till()
+  assert_equal(100, @karaoke.till() )
+end
+
+def test_karaoke_can_vend_a_guest_a_place_in_room_till_increases
+    @room1.add_guest(@guest1)
+    @karaoke.vend(@guest1, @room1)
+    assert_equal(105.00, @karaoke.till())
+    assert_equal(15, @guest1.wallet)
+  end
+
 
 # def test_can_add_rooms()
 #   assert_equal(3, @karaoke.add_room())

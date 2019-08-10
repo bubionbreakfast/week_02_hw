@@ -10,7 +10,7 @@ def initialize(name, favourite_song, wallet)
 end
 
 def alter(price)
-  @wallet += price
+  @wallet -= price
 end
 
 
